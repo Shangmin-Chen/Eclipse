@@ -1,0 +1,308 @@
+/* Content script styles for Chrome Extension Template */
+
+/* Extension feature enabled styles */
+.extension-feature-enabled {
+    /* Add any global styles when extension is active */
+}
+
+/* Theme variations */
+.extension-theme-dark {
+    /* Dark theme styles */
+    filter: invert(1) hue-rotate(180deg);
+}
+
+.extension-theme-light {
+    /* Light theme styles */
+    /* Default light theme */
+}
+
+/* Extension indicator styles */
+#extension-indicator {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 8px;
+    height: 8px;
+    background: #4ade80;
+    border-radius: 50%;
+    z-index: 999999;
+    pointer-events: none;
+    box-shadow: 0 0 8px rgba(74, 222, 128, 0.5);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Extension popup styles */
+.extension-popup {
+    position: fixed;
+    background: white;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000000;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+}
+
+.extension-popup-header {
+    padding: 12px 16px;
+    border-bottom: 1px solid #e5e7eb;
+    background: #f9fafb;
+    border-radius: 8px 8px 0 0;
+}
+
+.extension-popup-title {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #374151;
+}
+
+.extension-popup-content {
+    padding: 16px;
+}
+
+.extension-popup-footer {
+    padding: 12px 16px;
+    border-top: 1px solid #e5e7eb;
+    background: #f9fafb;
+    border-radius: 0 0 8px 8px;
+    text-align: right;
+}
+
+/* Extension button styles */
+.extension-btn {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.extension-btn:hover {
+    background: #2563eb;
+    transform: translateY(-1px);
+}
+
+.extension-btn:active {
+    transform: translateY(0);
+}
+
+.extension-btn-secondary {
+    background: #f3f4f6;
+    color: #374151;
+    border: 1px solid #d1d5db;
+}
+
+.extension-btn-secondary:hover {
+    background: #e5e7eb;
+}
+
+/* Extension notification styles */
+.extension-notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1f2937;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    z-index: 1000000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateX(-50%) translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Extension tooltip styles */
+.extension-tooltip {
+    position: absolute;
+    background: #1f2937;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    z-index: 1000000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.extension-tooltip::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 4px solid transparent;
+    border-top-color: #1f2937;
+}
+
+/* Extension highlight styles */
+.extension-highlight {
+    background: rgba(59, 130, 246, 0.2) !important;
+    border: 1px solid #3b82f6 !important;
+    border-radius: 2px !important;
+}
+
+.extension-highlight-hover {
+    background: rgba(59, 130, 246, 0.3) !important;
+    border-color: #2563eb !important;
+}
+
+/* Extension overlay styles */
+.extension-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.extension-modal {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    max-width: 90%;
+    max-height: 90%;
+    overflow: auto;
+}
+
+/* Extension form styles */
+.extension-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.extension-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.extension-form-label {
+    font-size: 13px;
+    font-weight: 500;
+    color: #374151;
+}
+
+.extension-form-input {
+    padding: 8px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.2s ease;
+}
+
+.extension-form-input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+/* Extension list styles */
+.extension-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.extension-list-item {
+    padding: 8px 12px;
+    border-bottom: 1px solid #f3f4f6;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.extension-list-item:hover {
+    background: #f9fafb;
+}
+
+.extension-list-item:last-child {
+    border-bottom: none;
+}
+
+/* Extension badge styles */
+.extension-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    background: #3b82f6;
+    color: white;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.extension-badge-success {
+    background: #10b981;
+}
+
+.extension-badge-warning {
+    background: #f59e0b;
+}
+
+.extension-badge-error {
+    background: #ef4444;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .extension-popup {
+        width: 90%;
+        max-width: 400px;
+    }
+    
+    .extension-notification {
+        width: 90%;
+        max-width: 400px;
+    }
+}
+
+/* Print styles */
+@media print {
+    .extension-indicator,
+    .extension-popup,
+    .extension-notification,
+    .extension-tooltip,
+    .extension-overlay {
+        display: none !important;
+    }
+} 

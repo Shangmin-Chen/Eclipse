@@ -1,0 +1,40 @@
+{
+  "name": "chrome-extension-template",
+  "version": "1.0.0",
+  "description": "A comprehensive template for creating Chrome extensions with modern features",
+  "main": "manifest.json",
+  "scripts": {
+    "build": "echo 'Build process would go here'",
+    "dev": "echo 'Development server would go here'",
+    "test": "echo 'Tests would run here'",
+    "lint": "echo 'Linting would run here'",
+    "package": "zip -r extension.zip . -x '*.git*' 'node_modules/*' '*.DS_Store' '*.log'",
+    "clean": "rm -rf dist extension.zip"
+  },
+  "keywords": [
+    "chrome-extension",
+    "browser-extension",
+    "template",
+    "javascript",
+    "manifest-v3"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "prettier": "^2.8.0",
+    "webpack": "^5.0.0",
+    "webpack-cli": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/chrome-extension-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/chrome-extension-template/issues"
+  },
+  "homepage": "https://github.com/yourusername/chrome-extension-template#readme"
+} 

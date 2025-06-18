@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eclipse - Web Traffic Recorder</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">Eclipse Recorder</h1>
+            <div class="status-indicator" id="statusIndicator"></div>
+        </header>
+        
+        <main class="main">
+            <div class="section">
+                <h2>Recording Controls</h2>
+                <div class="button-group">
+                    <button id="startRecording" class="btn btn-primary">
+                        <span class="btn-icon">⏺</span>
+                        Start Recording
+                    </button>
+                    <button id="stopRecording" class="btn btn-danger" style="display: none;">
+                        <span class="btn-icon">⏹</span>
+                        Stop Recording
+                    </button>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Recording Status</h2>
+                <div class="status-display" id="statusDisplay">
+                    <div class="status-item">
+                        <span class="status-label">Status:</span>
+                        <span class="status-value" id="recordingStatus">Not Recording</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-label">Duration:</span>
+                        <span class="status-value" id="recordingDuration">00:00:00</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-label">Requests:</span>
+                        <span class="status-value" id="requestCount">0</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-label">Data Size:</span>
+                        <span class="status-value" id="dataSize">0 KB</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section" id="exportSection" style="display: none;">
+                <h2>Export Data</h2>
+                <div class="button-group">
+                    <button id="exportData" class="btn btn-success">
+                        <span class="btn-icon">📥</span>
+                        Export Traffic Data
+                    </button>
+                    <button id="clearData" class="btn btn-secondary">
+                        <span class="btn-icon">🗑</span>
+                        Clear Data
+                    </button>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Settings</h2>
+                <div class="setting-item">
+                    <label for="autoRecord">Auto-record on page load:</label>
+                    <input type="checkbox" id="autoRecord" class="toggle">
+                </div>
+                <div class="setting-item">
+                    <label for="recordTypes">Record types:</label>
+                    <select id="recordTypes" class="select" multiple>
+                        <option value="GET" selected>GET</option>
+                        <option value="POST" selected>POST</option>
+                        <option value="PUT" selected>PUT</option>
+                        <option value="DELETE" selected>DELETE</option>
+                        <option value="PATCH" selected>PATCH</option>
+                    </select>
+                </div>
+                <div class="setting-item">
+                    <label for="exportFormat">Export format:</label>
+                    <select id="exportFormat" class="select">
+                        <option value="json">JSON</option>
+                        <option value="csv">CSV</option>
+                        <option value="har">HAR (HTTP Archive)</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Recent Activity</h2>
+                <div class="activity-log" id="activityLog">
+                    <p class="empty-state">No activity recorded yet. Start recording to see traffic data.</p>
+                </div>
+            </div>
+        </main>
+        
+        <footer class="footer">
+            <p class="version">v1.0.0</p>
+        </footer>
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html> 
