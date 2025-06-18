@@ -156,6 +156,9 @@ npm test
 - 📖 Documentation: [docs.webflowrecorder.com](https://docs. place holder .com)
 - 🐛 Issues: [GitHub Issues](https://github.com/Shangmin-Chen/Eclipse/issues)
 
+## Topic and Tags
+automation, browser-extension, web-scraping, ai, workflow-automation, python, javascript, selenium, api-automation, productivity, chrome-extension, no-code, rpa
+
 ## License
 
 MIT License - see [LICENSE](LICENSE) file for details.
